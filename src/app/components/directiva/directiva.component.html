@@ -1,16 +1,7 @@
-<div [ngClass]="alerta" class="alert alert-success" role="alert">
-  Alerta, cambio color!
-</div>
 
-<p id="fechaPanel">
-
-</p>
-
-<div class="fileContainer">
-  <button (click)="mostrar=true"> Mostrar </button>
-</div>
-
-<div *ngIf="mostrar">
+<button *ngIf="show" (click)="show = !show" class="alert alert-warning">{{show ? 'hide' : 'show'}}</button>
+<button *ngIf="!show" (click)="show = !show" class="alert alert-success">{{show ? 'hide' : 'show'}}</button>
+<br>
+<div *ngIf="show" class="alert alert-danger">
   <p> {{ fecha | date: "fullDate"}} </p>
-  <button (click)="mostrar=false"> Ocultar </button>
 </div>
