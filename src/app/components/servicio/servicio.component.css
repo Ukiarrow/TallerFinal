@@ -1,0 +1,11 @@
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    color: red;
+}
+h2,h3,h4,h5{
+    font-family: "Comic Sans MS";
+}
