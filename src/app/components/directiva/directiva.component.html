@@ -1,10 +1,16 @@
 <div [ngClass]="alerta" class="alert alert-success" role="alert">
   Alerta, cambio color!
 </div>
- 
-<p id="fecha">
-  {{ hora | date: "fullDate"}}
+
+<p id="fechaPanel">
+
 </p>
 
-<button id="boton">  
-</button>
+<div class="fileContainer">
+  <button (click)="mostrar=true"> Mostrar </button>
+</div>
+
+<div *ngIf="mostrar">
+  <p> {{ fecha | date: "fullDate"}} </p>
+  <button (click)="mostrar=false" (click)=""> Ocultar </button>
+</div>

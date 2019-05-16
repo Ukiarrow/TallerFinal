@@ -8,17 +8,14 @@ import localeEsCL from '@angular/common/locales/es-CL';
   styleUrls: ['./directiva.component.css']
 })
 export class DirectivaComponent implements OnInit {
-  hora: any;
-  dia: string;
-  mes: string;
-  ano: string;
-  dia_semana: string;
+  fecha: any;
+  mostrar = false;
 
   constructor() {
    }
 
   ngOnInit() {
-    this.hora = Date.now();
+    this.fecha = Date.now();
   }
 
 }
